@@ -1,5 +1,5 @@
 """
-URL configuration for Imtixon_8 project.
+URL configuration for config project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from graphene_django.views import GraphQLView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView, TokenVerifyView,
+)
+
+from config.swagger import swagger_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("graphql/", GraphQLView.as_view(graphiql=True))
 ]
+
+urlpatterns +=swagger_urlpatterns
