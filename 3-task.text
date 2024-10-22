@@ -1,0 +1,29 @@
+Subscription ->
+GraphQL Subscription —
+bu GraphQL'ning bir qismi bo'lib,
+ real vaqt rejimida ma'lumotlarni olish imkonini beradi.
+ Bu, asosan, serverdan mijozga ma'lumotlar o'zgarishi haqida xabar berish uchun ishlatiladi.
+ GraphQL Subscription yordamida mijozlar serverga ulanishni o'rnatishadi va serverdan ma'lumotlar o'zgarganda avtomatik ravishda yangilanishlarni olishadi.
+
+Asosiy tushunchalar:
+
+1. Real vaqt: Subscription yordamida mijozlar ma'lumotlar o'zgarishi bilan darhol xabardor bo'lishadi.
+  Bu, masalan, chat ilovalari, o'yinlar yoki real vaqt rejimida yangilanadigan ma'lumotlar uchun juda foydali.
+
+2. WebSocket:
+ GraphQL Subscription ko'pincha WebSocket protokoli orqali amalga oshiriladi.
+  Bu protokol ikki tomonlama aloqa o'rnatishga imkon beradi, ya'ni serverdan mijozga ma'lumotlar yuborish mumkin.
+
+3. Subscription so'rovi: Mijoz serverga subscription so'rovini yuboradi.
+    Bu so'rovda qaysi ma'lumotlar o'zgarishini va qachon yangilanishlarni olishni xohlayotgani ko'rsatiladi.
+
+4. Xabarlar: Server ma'lumotlar o'zgarganda, u mijozga xabar yuboradi.
+    Mijoz bu xabarni qabul qilib, o'z interfeysini yangilashi mumkin.
+
+Foydalanish holatlari:
+
+- Chat ilovalari: Foydalanuvchilar o'rtasida real vaqt rejimida xabar almashish.
+- O'yinlar: O'yin ichidagi voqealar va o'zgarishlar haqida xabardor qilish.
+- Ma'lumotlar yangilanishi: Real vaqt rejimida ma'lumotlar bazasidagi o'zgarishlarni kuzatish.
+
+GraphQL Subscription yordamida ilovalar yanada interaktiv va foydalanuvchilar uchun qulay bo'ladi.
